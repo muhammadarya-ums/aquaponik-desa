@@ -6,8 +6,8 @@ const seed = (site: string, index: number): SensorReading[] => Array.from({ leng
 const historyA = seed('site-a', 0)
 const historyB = seed('site-b', 1)
 export const MOCK_SITES: Site[] = [
-  { id: 'site-a', name: 'NODE 01 / DESA A', location: 'Karanganyar, Central Java', status: 'ACTIVE', updatedAt: '2026-08-20T08:30:00Z', latest: historyA.at(-1)!, history: historyA },
-  { id: 'site-b', name: 'NODE 02 / DESA B', location: 'Sukoharjo, Central Java', status: 'ACTIVE', updatedAt: '2026-08-20T08:30:00Z', latest: historyB.at(-1)!, history: historyB },
+  { id: 'site-a', name: 'Dusun Sekar Putih', location: 'Sekar Putih, East Java', status: 'ACTIVE', updatedAt: '2026-08-20T08:30:00Z', latest: historyA.at(-1)!, history: historyA },
+  { id: 'site-b', name: 'Dusun Jedong', location: 'Jedong, East Java', status: 'ACTIVE', updatedAt: '2026-08-20T08:30:00Z', latest: historyB.at(-1)!, history: historyB },
 ]
 export const getMockSite = (id: string) => MOCK_SITES.find((site) => site.id === id) ?? MOCK_SITES[0]
 export const toCsv = (site: Site) => ['timestamp,ph,temperature,waterLevelCm,solarVoltage,solarCurrent,batteryPercent', ...site.history.map((r) => [r.timestamp,r.ph,r.temperature,r.waterLevelCm,r.solarVoltage,r.solarCurrent,r.batteryPercent].join(','))].join('\n')

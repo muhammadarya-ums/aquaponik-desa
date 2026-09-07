@@ -284,8 +284,8 @@ export function DetailDashboard({ siteId }: { siteId: string }) {
               onChange={(e) => setSite(getMockSite(e.target.value))}
               className="h-11 rounded-xl border-2 border-slate-200 bg-white px-4 text-xs font-bold text-slate-800 outline-none focus:border-green-600 transition-all cursor-pointer shadow-sm"
             >
-              <option value="site-a">LOKASI A / DESA SEKARPUTIH</option>
-              <option value="site-b">LOKASI B / DESA MITRA</option>
+              <option value="site-a">LOKASI A / Dusun Sekar Putih</option>
+              <option value="site-b">LOKASI B / Dusun Jedong</option>
             </select>
             <button
               onClick={exportCsv}
